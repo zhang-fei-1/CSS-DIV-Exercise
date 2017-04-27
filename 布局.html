@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>基础布局</title>
+	<style type="text/css">
+		#container{
+			width: 1024px;
+			background: gray;
+		}	
+
+		#head{
+			width: 1024px;
+			height: 50px;
+			background: blue;
+		}
+
+		#main{
+			width: 1024px;
+			height: 500px;
+			background: orange;
+		}
+
+		#mainLeft{
+			width: 700px;
+			height: 500px;
+			float: left;
+			background: black;
+		}
+		.leftBlock{
+			width: 330px;
+			height: 230px;
+			margin: 10px;
+			background: white;
+			float: left;
+			font size: 7;
+			text-align: center;  
+		}
+		#mainRight{
+			width: 300;
+			margin-left: 24;
+			height: 500px;
+			float: right;
+		}
+
+		#footer{
+			width: 1024px;
+			height: 50px;
+			background: blue;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		
+		<div id="head"></div>
+		<div id="main">
+			<div id="mainLeft">
+				<div class="leftBlock">
+
+					The <abbr title="fdslfjklsfklkl"> wx</abbr>
+				</div>
+				
+				<div class="leftBlock"> 
+					<a href="http://www.w3school.com.cn">W3School</a>
+				</div>
+				
+				<div class="leftBlock">
+					
+					<address>
+						Written by <a href="mailto:webmaster@example.com">Donald Duck</a>.<br> 
+						Visit us at:<br>
+						Example.com<br>
+						Box 564, Disneyland<br>
+						USA
+					</address>
+				</div>
+
+				<div class="leftBlock"></div>
+			</div>
+			
+			<div id="mainRight"></div>
+		</div>
+		<div id="footer"></div>
+	</div>
+
+</body>
+</html>
