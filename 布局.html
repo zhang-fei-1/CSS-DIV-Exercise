@@ -1,89 +1,101 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>基础布局</title>
-	<style type="text/css">
-		#container{
-			width: 1024px;
-			background: gray;
-		}	
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-		#head{
-			width: 1024px;
+		<title>DIV-CSS布局教程</title>
+
+		<style type="text/css">
+		#Container{
+			width:auto;
+			height: auto;
+			margin:0 auto;/*设置整个容器在浏览器中水平居中*/
+			/*background:url(qf_bj_1.png) no-repeat 0px 0px;*/
+			/*background-image: url(qf_bj_1.png);*/
+			background-repeat: no-repeat;
+			background-position:100% 100%;
+			background-color:rgba(255,255,255,0.00)
+			/*height: 3500;*/
+			/*background: red;*/
+		}
+		#Header{
+			height:80px;
+			background:#093;
+			background-color:rgba(255,255,255,0.00)
+		}
+		#logo{
+			/*padding-left:50px;
+			padding-top:20px;
+			padding-bottom:50px;*/
+			background-color:rgba(255,255,255,0.00)
 			height: 50px;
-			background: blue;
+			/*background-color: orange;*/
 		}
-
-		#main{
-			width: 1024px;
-			height: 500px;
-			background: orange;
+		#Content{
+			/*height:600px;*/
+			overflow:auto;
+			/*此处对容器设置了高度，一般不建议对容器设置高度，一般使用overflow:auto;属性设置容器根据内容自适应高度，如果不指定高度或不设置自适应高度，容器将默认为1个字符高度，容器下方的布局元素（footer）设置margin-top:属性将无效*/
+			margin-top:20px;/*此处讲解margin的用法，设置content与上面header元素之间的距离*/
+			/*background:orange;*/
+			background-color:rgba(255,255,255,0.00)
+			
 		}
-
-		#mainLeft{
-			width: 700px;
-			height: 500px;
-			float: left;
-			background: black;
+		#Content-Left{
+			height:400px;
+			width:720px;
+			margin:10px;/*设置元素跟其他元素的距离为20像素*/
+			float:left;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+			/*background:#90C;*/
+			background-color:rgba(255,255,255,0.00)
 		}
-		.leftBlock{
-			width: 330px;
-			height: 230px;
-			margin: 10px;
-			background: white;
-			float: left;
-			font size: 7;
-			text-align: center;  
+		#Content-Main{
+			height:400px;
+			width:200px;
+			margin:10px;/*设置元素跟其他元素的距离为20像素*/
+			float:left;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+			/*background:#90C;*/
+			background-color:rgba(255,255,255,0.00)
 		}
-		#mainRight{
-			width: 300;
-			margin-left: 24;
-			height: 500px;
-			float: right;
-		}
-
-		#footer{
-			width: 1024px;
+		/*注：Content-Left和Content-Main元素是Content元素的子元素，两个元素使用了float:left;设置成两列，这个两个元素的宽度和这个两个元素设置的padding、margin的和一定不能大于父层Content元素的宽度，否则设置列将失败*/
+		#Footer{
+			/*height:510px;*/
 			height: 50px;
-			background: blue;
+			/*background:#90C;*/
+			background-color:rgba(255,255,255,0.00)
+			margin-top:20px;
 		}
 
-	</style>
-</head>
-<body>
-	<div id="container">
-		
-		<div id="head"></div>
-		<div id="main">
-			<div id="mainLeft">
-				<div class="leftBlock">
+		body{
+			background-image: url(qf_bj_1.png);
+		}
+		img {
+    			width: 100%;
+    			height: 100%;
+    			object-fit:cover;
+		}
+		.Clear{
+			clear:both;
+		}
+		</style>
+	</head>
 
-					The <abbr title="fdslfjklsfklkl"> wx</abbr>
-				</div>
-				
-				<div class="leftBlock"> 
-					<a href="http://www.w3school.com.cn">W3School</a>
-				</div>
-				
-				<div class="leftBlock">
-					
-					<address>
-						Written by <a href="mailto:webmaster@example.com">Donald Duck</a>.<br> 
-						Visit us at:<br>
-						Example.com<br>
-						Box 564, Disneyland<br>
-						USA
-					</address>
-				</div>
+	<body >
+		<!-- style="background-image:url('qf_bj_1.png');" -->
+		<div id="Container">
 
-				<div class="leftBlock"></div>
+			<div id="Header">head</div>
+
+			<div id="logo">这里设置了padding属性介绍一下padding的用法,padding将设置文本与边框的距离</div>
+			
+			<div id="Content">
+		   		<div id="Content-Left">Content-Left</div>
+		        		<div id="Content-Main">Content-Main</div>
+		        		
 			</div>
 			
-			<div id="mainRight"></div>
-		</div>
-		<div id="footer"></div>
-	</div>
+			<div class="Clear">如何你上面用到float,下面布局开始前最好清除一下</div>
+			<div id="Footer">Footer</div>
 
-</body>
+		</div>
+	</body>
 </html>
